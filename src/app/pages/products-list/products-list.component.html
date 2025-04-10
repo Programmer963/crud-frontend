@@ -1,0 +1,10 @@
+<h2>Список продуктов</h2>
+<ul *ngIf="products.length > 0; else noData">
+  <li *ngFor="let product of products">
+    <strong>{{ product.name }}</strong>: {{ product.description }} - {{ product.price }}₽
+  </li>
+</ul>
+
+<ng-template #noData>
+  <p>Нет доступных продуктов.</p>
+</ng-template>
